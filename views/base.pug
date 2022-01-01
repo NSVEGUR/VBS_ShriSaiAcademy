@@ -1,0 +1,124 @@
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		meta(name='description' content='VBS Shri Sai Academy, Spoken and Grammer Tutorial Academy')
+		meta(name='keywords' content='VBS, VBS Academy, VBS Shri Sai Academy')
+		meta(name='author' content='Srinivas Vegur')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		link(rel='shortcut icon' type='image/png' href='images/logo.png')
+		link(rel='stylesheet' href='styles/main.css')
+		script(src='https://cdn.jsdelivr.net/npm/typed.js@2.0.12')
+		script(src='https://smtpjs.com/v3/smtp.js')
+		script(defer src='scripts/main.js')
+		script(defer src='scripts/formHandler.js')
+		title VBS Shri Sai Academy
+
+	body
+		//- NAVIGATION BAR
+		.nav-container
+			nav
+				input#check(type='checkbox')
+				label.menu(for='check')
+					.wrapper-menu
+						.line-menu.half.start
+						.line-menu
+						.line-menu.half.end
+				label.logo
+					img(src='images/logo.png' alt='VBS Academy Logo')
+				ul
+					li
+						a.active(href='#' data-section='0') Home
+					li
+						a(href='#' data-section='1') About
+					li
+						a(href='#' data-section='2') Services
+					li
+						a(href='#' data-section='3') Institute
+					li
+						a(href='#' data-section='4') Numerology
+					li
+						a(href='#' data-section='5') Contact
+		
+		//- HOME
+		section#home(data-section='0')
+			.home-div
+				.home-img
+					img(src='images/srinivas.png' alt='srinivas vegur img')
+				.home-text
+					h1.greet Hey! This is Srinivas Vegur
+					h1.typed-head I'm a 
+						span.typed
+					p You can reach out to me if you wanna develop amazing communication skills, to feel fascinating destiny or to join our reputed Institute.
+					.home-buttons
+						a(href='#' data-section='5') Contact Me
+						a(href='#' data-section='1') Explore more
+		
+		//- ABOUT
+		section#about(data-section='1')
+			.about-text
+				h1 About
+				.about-flex
+					div
+						p &emsp;&emsp;&emsp;Hi, I'm Srinivas Vegur! Communication Skills Trainer, & Professional tutor. After teaching and training 10000+ Students, I have given you all my secrets of the Language Learning Mechanism I have gained in 25 years of my language learning experience and so far. I am on a mission to train 1,00,000 people to skyrocket their career with fluent English. I want you to grow your skills & become successful in your life. Keep Learning..! Keep Growing..!
+					div
+						h4 Service to others is the rent you pay for your room here on earth.
+						h5 There are many things I can offer...
+						ul
+							li Spoken classes to improve your talkative abilities.
+							li Grammer tutorials to play with english as you wish.
+							li Numerological sessions for a successful life.
+							li Horoscopic astrology to resolve your problems.
+							li Worked as a English and Mathematics teacher in a Institute.
+							li Owned an Institute from KG sections to SSLC, and working as its Principal.
+		
+		//- SERVICES
+		section#services(data-section='2')
+			h1 Services
+		
+		//- INSTITUTE
+		section#institute(data-section='3')
+			h1 Institute
+		
+		//- NUMEROLOGY
+		section#numerology(data-section='4')
+			h1 Numerology
+		
+		//- CONTACT
+		section#contact(data-section='5')
+			.footer
+				.navigation
+					h1 Navigation
+					a(href='#' data-section='0') Home
+					a(href='#' data-section='0') About
+					a(href='#' data-section='0') Services
+					a(href='#' data-section='0') Institute
+					a(href='#' data-section='0') Numerology
+				.info
+					h1 Contact me:
+					h4 Email:
+						a(href='mailto:saisrinivas0077@gmail.com') saisrinivas0077@gmail.com
+					h4 Phone:
+						a(href='tel:919972784874') +919972784874
+				form
+					h1 Get in touch
+
+					label(for='name') Name:
+					input#name(type='text' placeholder='Your name')
+					small.error
+
+					label(for='email') Email:
+					input#email(type='text' placeholder='Your email')
+					small.error
+
+					label(for='mobile') Mobile:
+					input#mobile(type='tel' placeholder='Your mobile number')
+					small.error
+
+					label(for='message') Message:
+					textarea#message(placeholder='Your message' rows='2')
+					small.error
+
+					.center
+						input(type='submit' value='Send')
+						p#success
