@@ -1,0 +1,26 @@
+[
+	{
+		"_id": "61cdfa409db8bb0c36e2621a",
+		"paymentAPICall": "SpokenTutorials",
+		"heading": "VBS Spoken Bootcamp",
+		"description": "You will learn more and more english here",
+		"amount": 500,
+		"paymentLink": "https://razorpaylink1"
+	},
+	{
+		"_id": "61cdfac09db8bb0c36e2621b",
+		"paymentAPICall": "NumerologySection",
+		"heading": "Numerology Name change",
+		"description": "wanna change your name contact me:)",
+		"amount": 2000,
+		"paymentLink": "https://razorpaylink2"
+	},
+	{
+		"_id": "61cdfb0f9db8bb0c36e2621c",
+		"paymentAPICall": "Others",
+		"heading": "Institute Managemenet",
+		"description": "This is for other uses of dad",
+		"amount": 10000,
+		"paymentLink": "https://razorpaylink3"
+	}
+]
