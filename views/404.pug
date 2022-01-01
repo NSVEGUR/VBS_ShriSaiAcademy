@@ -8,17 +8,12 @@ html
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		link(rel='shortcut icon' type='image/png' href='images/logo.png')
 		link(rel='stylesheet' href='styles/main.css')
-		script(src='https://cdn.jsdelivr.net/npm/typed.js@2.0.12')
-		script(src='https://smtpjs.com/v3/smtp.js')
-		script(defer src='scripts/main.js')
-		script(defer src='scripts/formHandler.js')
-		title #{title}
-
+		script(defer src='scripts/404.js')
+		title #{title} | #{subtitle}
 	body
-		include _nav
-		include _home
-		include _about
-		include _services
-		include _institute
-		include _numerology
-		include _footer
+		.error-page
+			#error-anim
+			h1 Page Not Found!
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js'
+    integrity='sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA=='
+    crossorigin='anonymous' referrerpolicy='no-referrer')

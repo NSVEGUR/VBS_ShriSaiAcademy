@@ -7,6 +7,7 @@ const app = express();
 //REQUIRED CREATED MODULES
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorHandler');
+const viewRouter = require('./routes/viewRouter');
 const paymentManagerRouter = require('./routes/paymentRouter');
 const ordersRouter = require('./routes/ordersRouter');
 
@@ -21,11 +22,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //ROUTES
-app.get('/', (req, res) => {
-	res.status(200).render('base', {
-		title: "VBS Shri Sai Academy"
-	});
-})
+app.use('/', viewRouter);
 app.use('/api/v1/paymentManager', paymentManagerRouter);
 app.use('/api/v1/orders', ordersRouter);
 

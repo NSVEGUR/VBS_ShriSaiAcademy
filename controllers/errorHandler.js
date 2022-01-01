@@ -27,8 +27,15 @@ const sendErrorDev = (err, res) => {
 	});
 }
 const sendErrorProd = (err, res) => {
-	//Operational Error
-	if (err.isOperational) {
+	//Operational Error + 404 for animation page not found
+	if (err.statusCode === 404) {
+		res.status(404).render('404', {
+			title: "VBS",
+			subtitle: '404 Error'
+		});
+	}
+	//Operational Error 
+	else if (err.isOperational) {
 		res.status(err.statusCode).json({
 			status: err.status,
 			message: err.message,

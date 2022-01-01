@@ -1,0 +1,134 @@
+#home{
+	height: 100vh;	
+	position: relative;
+	overflow: hidden;
+}
+.home-div{
+	position: absolute;
+	height: calc(100vh - 85px);
+	width: 100%;
+	inset: 80px 0 0 0;
+	padding: 0 40px;
+	z-index: 4;
+}
+#home:after {
+  content: ' ';
+  border-bottom: 50vh solid var(--tertiary-light-color);
+  border-left: 50vw solid transparent;
+  width: 0;
+  position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 3;
+}
+#home:before {
+  content: ' ';
+  border-bottom: 85vh solid var(--secondary-light-color);
+  border-left: 85vw solid transparent;
+  width: 0;
+  position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+.home-img{
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	filter: drop-shadow(5px 5px 5px rgb(93, 93, 93));
+}
+.home-text{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 50%;
+	font-family: var(--heading-font);
+	color: var(--secondary-text-color);
+}
+.greet{
+	font-size:25px;
+	margin-bottom: 10px;
+}
+
+.typed-head{
+	font-size:40px;
+}
+.typed{
+	color: var(--secondary-dark-color);
+}
+.home-text p{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size:15px;
+	width: 75%;
+	font-family:var(--primary-font);
+}
+
+.home-buttons a{
+   padding: 10px;
+	 border-radius: 5px;
+}
+.home-buttons a:first-child{
+	color: white;
+	padding: 12px;
+	background: var(--primary-dark-color);
+	margin-right: 20px;
+}
+.home-buttons a:last-child{
+	color: black;
+	border: 2px solid var(--primary-dark-color);
+}
+@media (max-width: 858px){
+	#home:after {
+		border-bottom: 40vh solid var(--tertiary-light-color);
+		border-left: 40vw solid transparent;
+	}
+	#home:before {
+		border-bottom: 70vh solid var(--secondary-light-color);
+		border-left: 70vw solid transparent;
+	}	
+	.home-img{
+		left: 0;
+	}
+}
+@media (max-width: 638px){
+	.home-img{
+		height: 60%;
+		bottom: 0;
+		/* top: 0; */
+	}
+	.home-text{
+		top: 10%;
+		transform: translateY(-10%); 
+		/* bottom: 5%;
+		transform: translateY(-5%); */
+		right: 10px;
+		left: auto;
+		text-align: right;
+	}
+	.home-text p{
+		width: auto;
+	}
+	.home-buttons a{
+		padding: 5px;
+		border-radius: 5px;
+ }
+ .home-buttons a:first-child{
+	 color: white;
+	 padding: 7px;
+	 margin-right: 10px;
+ }
+ .home-buttons a:last-child{
+	 color: black;
+ }
+	.greet{
+		font-size:20px;
+	}
+	.typed-head{
+		font-size:25px;
+	}
+}
+
+@media (max-width: 480px){
+
+}
