@@ -4,6 +4,7 @@
 @import '_about.css';
 @import '_template.css';
 @import '_contact.css';
+@import '_footer.css';
 
 #services, #institute, #numerology{
 	height: 100vh;

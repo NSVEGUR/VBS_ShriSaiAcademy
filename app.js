@@ -10,6 +10,7 @@ const globalErrorHandler = require('./controllers/errorHandler');
 const viewRouter = require('./routes/viewRouter');
 const paymentManagerRouter = require('./routes/paymentRouter');
 const ordersRouter = require('./routes/ordersRouter');
+const mailerRouter = require('./routes/mailerRouter');
 
 app.use(morgan('dev'));
 app.use(express.json());
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', viewRouter);
 app.use('/api/v1/paymentManager', paymentManagerRouter);
 app.use('/api/v1/orders', ordersRouter);
+app.use('/api/v1/sendMail', mailerRouter);
 
 //UNUSED ROUTES MIDDLEWARE
 app.use('*', (req, res, next) => {

@@ -79,7 +79,6 @@ input[type="text"]:focus, textarea:focus{
 #success{
 	color: green;
 	margin-top:5px;
-	margin-left: 15px;
 }
 @media (max-width: 580px) {
 	.footer{

@@ -21,3 +21,22 @@ exports.getInstitute = (req, res) => {
 		subtitle: "Institute"
 	});
 };
+
+exports.getPrivacyPolicy = (req, res) => {
+	res.status(200).render('privacypolicy', {
+		title: "VBS Shri Sai Academy",
+		subtitle: "Privacy Policy"
+	});
+}
+exports.getTermsAndConditions = (req, res) => {
+	res.status(200).render('terms', {
+		title: "VBS Shri Sai Academy",
+		subtitle: "Terms and Conditions"
+	});
+}
+exports.getRefundPolicy = (req, res) => {
+	res.status(200).render('refundpolicy', {
+		title: "VBS Shri Sai Academy",
+		subtitle: "Returns and Refunds Policy"
+	});
+}

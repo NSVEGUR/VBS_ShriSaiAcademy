@@ -28,4 +28,11 @@ img{
 body{
   font-family: var(--primary-font);
   background: var(--primary-light-color);
+	padding: 15px;
+}
+h1, h2, h3{
+	margin: 15px 0;
+}
+p{
+	margin: 10px 0;
 }
