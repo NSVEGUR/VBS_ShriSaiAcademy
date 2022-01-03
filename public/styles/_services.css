@@ -1,0 +1,85 @@
+#services, #institute, #numerology{
+	height: 100vh;
+	padding-top: 10px;
+}
+#services h1, #institute h1, #numerology h1{
+	color: var(--secondary-text-color);
+	font-family: var(--heading-font);
+	font-size: 40px;
+	margin-left: 20px;
+	margin-top: 30px;
+	padding-left: 50px;
+}
+
+.services-flex{
+	height:100%;
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content:space-evenly;
+}
+.service-1, .service-2{
+	height: 70%;
+	width: 40%;
+	background: white;
+	position: relative;
+	/* border-radius: 0px 50px 0px 50px; */
+	background: linear-gradient(135deg, var(--primary-light-color), var(--secondary-light-color), var(--primary-light-color), var(--secondary-light-color));
+	box-shadow: inset 7px 7px 20px var(--secondary-light-color), inset -7px -7px 20px var(--tertiary-dark-color);
+}
+.service-1 img, .service-2 img{
+	/* border-radius: 50px 0px 50px 0px; */
+	position: absolute;
+	height: 60%;
+	bottom: 0;
+	right: 0;
+}
+.service-flex{
+	position: absolute;
+	padding: 50px;
+	height: 70%;
+	max-width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+	z-index: 1;
+}
+.service-flex a{
+	padding: 10px;
+	max-width:150px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	border-radius: 10px;
+	background: var(--primary-dark-color);
+}
+
+@media (max-width: 1028px) {
+	#services{
+		height:150vh;
+	}
+	.services-flex{
+		flex-direction: column;
+	}
+  .service-flex{
+	  padding: 0;
+		padding-left: 5px;
+		padding-top: 5px; 
+	}
+	.service-1, .service-2{
+		height: 40%;
+		width: 95%;
+	}
+	.service-1 img, .service-2 img{
+		height: 50%;
+	}
+}
+@media (max-width: 480px){
+
+	#services h1, #institute h1, #numerology h1{
+		font-size:25px;
+		padding: 5px;
+	}
+}

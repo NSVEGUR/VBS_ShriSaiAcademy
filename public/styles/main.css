@@ -2,30 +2,11 @@
 @import '_nav.css';
 @import '_home.css';
 @import '_about.css';
+@import '_services.css';
 @import '_template.css';
 @import '_contact.css';
 @import '_footer.css';
 
-#services, #institute, #numerology{
-	height: 100vh;
-	padding-top: 10px;
-}
-#services h1, #institute h1, #numerology h1{
-	color: var(--secondary-text-color);
-	font-family: var(--heading-font);
-	font-size: 40px;
-	margin-left: 20px;
-	margin-top: 30px;
-	padding: 50px;
-}
-
-@media (max-width: 480px){
-
-	#services h1, #institute h1, #numerology h1{
-		font-size:25px;
-		padding: 5px;
-	}
-}
 
 .error-page{
   height: 100vh;

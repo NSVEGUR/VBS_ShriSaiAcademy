@@ -11,8 +11,9 @@ const viewRouter = require('./routes/viewRouter');
 const paymentManagerRouter = require('./routes/paymentRouter');
 const ordersRouter = require('./routes/ordersRouter');
 const mailerRouter = require('./routes/mailerRouter');
+const razorpayRouter = require('./routes/razorpayRouter');
 
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(express.json());
 
 //SETTING VIEW ENGINE
@@ -22,11 +23,16 @@ app.set('views', path.join(__dirname, 'views'));
 //SERVING STATIC FILES
 app.use(express.static(path.join(__dirname, 'public')));
 
+//FOR RAZORPAY PAYMENT ID GENERATION
+app.use(express.urlencoded({ extended: false }));
+
 //ROUTES
 app.use('/', viewRouter);
 app.use('/api/v1/paymentManager', paymentManagerRouter);
 app.use('/api/v1/orders', ordersRouter);
 app.use('/api/v1/sendMail', mailerRouter);
+app.use('/api/v1/razorpay', razorpayRouter);
+
 
 //UNUSED ROUTES MIDDLEWARE
 app.use('*', (req, res, next) => {

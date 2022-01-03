@@ -1,0 +1,95 @@
+@import '_root.css';
+
+body{
+	font-family: var(--primary-font);
+  background: url('../images/background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.logo img{
+  max-width: 100px;
+}
+section{
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-container{
+  max-height: 550px;
+  max-width: 550px;
+  height: 90%;
+  width: 90%;
+  border-radius:5px;
+  background: linear-gradient(45deg,var(--tertiary-dark-color), var(--tertiary-light-color), var(--primary-light-color), var(--secondary-light-color), var(--tertiary-light-color), var(--tertiary-dark-color));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.status-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+.form{
+  display: flex;
+  height:50%;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+h1{
+  font-family: var(--heading-font);
+}
+h1, h3, a{
+  text-align: center;
+  color: black;
+}
+h3{
+  color: var(--secondary-text-color);
+}
+a{
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background: linear-gradient(135deg, var(--primary-dark-color), var(--secondary-dark-color), var(--primary-dark-color));
+  color: white;
+}
+.status{
+  text-align: center;
+}
+@media (max-width: 480px){
+  .form-container{
+    height: 60%;
+    width: 95%;
+  }
+}

@@ -5,6 +5,7 @@ const paymentManagerController = require('../controllers/paymentManagerControlle
 // router.route('/paymentStats').get(paymentController.getPaymentStats);
 // router.route('/monthly-plan/:year').get(paymentController.getMonthlyPlan);
 
+//FOR Development Purpose
 router
 	.route('/')
 	.get(paymentManagerController.getAllPayments)
@@ -14,5 +15,7 @@ router.
 	.get(paymentManagerController.getPayment)
 	.patch(paymentManagerController.updatePayment)
 	.delete(paymentManagerController.deletePayment);
+
+
 
 module.exports = router;
