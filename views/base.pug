@@ -11,16 +11,19 @@ html(lang='en')
 		script(src='https://kit.fontawesome.com/549aab17e5.js' crossorigin='anonymous')
 		script(src='https://cdn.jsdelivr.net/npm/typed.js@2.0.12')
 		script(src='https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js')
+		script(defer src='scripts/splash.js')
 		script(defer src='scripts/main.js')
 		script(defer src='scripts/formHandler.js')
 		title #{title}
 
 	body
-		include _nav
-		include _home
-		include _about
-		include _services
-		include _institute
-		include _numerology
-		include _contact
-		include _footer
+		include _splash
+		main.hidden
+			include _nav
+			include _home
+			include _about
+			include _services
+			include _institute
+			include _numerology
+			include _contact
+			include _footer

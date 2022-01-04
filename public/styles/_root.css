@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap');
 
 :root{
   --primary-font: 'Lato', sans-serif;
@@ -31,4 +32,14 @@ img{
 body{
   font-family: var(--primary-font);
   background: var(--primary-light-color);
+}
+
+@keyframes transitionInNormal {
+  from{
+    opacity: 0;
+    transform: translateY(15px);
+  } to{
+    opacity: 1;
+    transform: translateY(0); 
+  }
 }
