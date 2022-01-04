@@ -7,16 +7,14 @@ html
 		meta(name='author' content='Srinivas Vegur')
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		link(rel='shortcut icon' type='image/png' href='images/logo.png')
-		link(rel='stylesheet' href='styles/main.css')
-		script(src='https://smtpjs.com/v3/smtp.js')
-		script(defer src='scripts/formHandler.js')
+		link(rel='stylesheet' href='styles/template.css')
 		title #{title} | #{subtitle}
 
 	body
 		header
 			img(src='images/logo.png' alt='VBS Shri Sai Academy Logo')
-
+			h1 VBS Shri Sai Academy
 		block content
 			h1 This is roottemplate
 		
-		include _templatefooter
+		include _footer.pug

@@ -1,4 +1,14 @@
 extends template
 
 block content
-	h1 This will be written from tutor api
+	section
+		main
+			iframe(src=data.mainLink title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+		aside
+			each detail in data.subDetails
+				.card
+					a.card-overlay(href=detail.id)
+					iframe(src=detail.link title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+					.card-details
+						h1= detail.heading
+						p= detail.description

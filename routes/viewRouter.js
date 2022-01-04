@@ -4,6 +4,7 @@ const ViewController = require('../controllers/viewController');
 
 router.get('/', ViewController.getMainPage);
 router.get('/tutor', ViewController.getTutor);
+router.get('/:id', ViewController.getCertainVideo);
 router.get('/numerology', ViewController.getNumerology);
 router.get('/institute', ViewController.getInstitute);
 router.get('/privacypolicy', ViewController.getPrivacyPolicy);

@@ -92,12 +92,10 @@ class App {
 				});
 			})
 		})
-		document.querySelectorAll('.home-buttons > a').forEach(el => {
-			el.addEventListener('click', (e) => {
-				e.preventDefault();
-				document.querySelector(`section[data-section="${el.dataset.section}"]`).scrollIntoView({
-					behavior: 'smooth',
-				});
+		document.querySelector('.home-btn-1').addEventListener('click', (e) => {
+			e.preventDefault();
+			document.getElementById('contact').scrollIntoView({
+				behavior: 'smooth',
 			})
 		})
 	}

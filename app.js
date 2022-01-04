@@ -12,6 +12,7 @@ const paymentManagerRouter = require('./routes/paymentRouter');
 const ordersRouter = require('./routes/ordersRouter');
 const mailerRouter = require('./routes/mailerRouter');
 const razorpayRouter = require('./routes/razorpayRouter');
+const videosRouter = require('./routes/videosRouter');
 
 // app.use(morgan('dev'));
 app.use(express.json());
@@ -32,6 +33,7 @@ app.use('/api/v1/paymentManager', paymentManagerRouter);
 app.use('/api/v1/orders', ordersRouter);
 app.use('/api/v1/sendMail', mailerRouter);
 app.use('/api/v1/razorpay', razorpayRouter);
+app.use('/api/v1/videos', videosRouter);
 
 
 //UNUSED ROUTES MIDDLEWARE
