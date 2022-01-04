@@ -1,5 +1,5 @@
 const payButton = document.getElementById('paybutton');
-const heading = document.querySelector('.heading').innerHTML;
+const heading = document.querySelector('.section-heading > h1').innerHTML;
 const amount = payButton.innerHTML.split(' ');
 
 axios.post('/api/v1/razorpay/order', amount).then((info) => {

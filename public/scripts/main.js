@@ -81,7 +81,7 @@ class App {
 					behavior: 'smooth',
 				});
 				document.getElementById('check').checked = false;
-				wrapperMenu.classList.remove('open');
+				this.wrapperMenu.classList.remove('open');
 			})
 		})
 		document.querySelectorAll('.navigation > a').forEach(el => {

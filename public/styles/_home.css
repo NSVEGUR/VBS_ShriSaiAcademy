@@ -188,8 +188,8 @@
 		/* top: 0; */
 	}
 	.home-text{
-		top: 35%;
-		transform: translateY(-35%); 
+		top: 15%;
+		transform: translateY(-15%); 
 		/* bottom: 5%;
 		transform: translateY(-5%); */
 		right: 10px;
@@ -227,5 +227,8 @@
 	
 	.home-heading span {
 		font-size: 50px;
+	}
+	#home{
+		background-attachment:scroll;
 	}
 }
