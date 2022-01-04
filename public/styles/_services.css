@@ -1,85 +1,91 @@
-#services, #institute, #numerology{
-	height: 100vh;
-	padding-top: 10px;
+ .services-flex{
+	 padding: 30px;
+	 display: flex;
+	 flex-direction: row;
+	 align-items:center;
+	 justify-content: center;
+	 gap: 10px;
+	 text-align:justify;
+ }
+ .service{
+	 padding:30px;
+	 height: 400px;
+	 width: auto;
+	 border-radius: 5px;
+	 border: 1px solid #EBEFF4;
+	 display: flex;
+	 flex-direction: column;
+	 align-items:center;
+	 box-sizing: border-box;
+	 justify-content:space-evenly;
+	 transition: all 0.3s ease-in-out;
+	 box-shadow: 0px 0px 0px rgba(180, 180, 180, 0.5), 0px 0px 0px rgba(180, 180, 180, 0.5);
+	 gap: 10px;
+ }
+ .service:hover{
+	 box-shadow: 7px 7px 10px rgba(180, 180, 180, 0.5), -7px 0px 7px rgba(180, 180, 180, 0.5);
+ }
+.service .fas{
+	font-size:30px;
+	color: var(--secondary-dark-color);
 }
-#services h1, #institute h1, #numerology h1{
-	color: var(--secondary-text-color);
-	font-family: var(--heading-font);
-	font-size: 40px;
-	margin-left: 20px;
-	margin-top: 30px;
-	padding-left: 50px;
-}
-
-.services-flex{
-	height:100%;
-	width:100%;
-	display:flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content:space-evenly;
-}
-.service-1, .service-2{
-	height: 70%;
-	width: 40%;
-	background: white;
-	position: relative;
-	/* border-radius: 0px 50px 0px 50px; */
-	background: linear-gradient(135deg, var(--primary-light-color), var(--secondary-light-color), var(--primary-light-color), var(--secondary-light-color));
-	box-shadow: inset 7px 7px 20px var(--secondary-light-color), inset -7px -7px 20px var(--tertiary-dark-color);
-}
-.service-1 img, .service-2 img{
-	/* border-radius: 50px 0px 50px 0px; */
-	position: absolute;
-	height: 60%;
-	bottom: 0;
-	right: 0;
-}
-.service-flex{
-	position: absolute;
-	padding: 50px;
-	height: 70%;
-	max-width: 80%;
+ .service-buttons{
+	 width: 100%;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 20px;
-	z-index: 1;
-}
-.service-flex a{
-	padding: 10px;
-	max-width:150px;
-	text-align: center;
-	color: white;
+	flex-direction: row;
+	align-items:center;
+	justify-content: space-evenly;
+ }
+ .service-buttons a{
+	 color: black;
 	cursor: pointer;
-	border-radius: 10px;
-	background: var(--primary-dark-color);
+	border-radius: 5px;
+ }
+ .service-buttons a:first-child{
+	padding:8px;
+	background-color: var(--primary-dark-color);
+	color: white;
+ }
+ .service-buttons a:first-child:hover{
+	transition: all 0.1s ease-in-out;
+	padding: 6px;
+	background: transparent;
+	color: black;
+	border: 2px solid var(--primary-dark-color);
+}
+ .service-buttons a:last-child{
+	padding: 6px;
+	color: black;
+	position: relative;
+	border: 2px solid var(--primary-dark-color);
+ }
+ .service-buttons a:last-child:before{
+	transition: all 0.5s ease;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	content: "";
+	background-color: var(--primary-dark-color);
+}
+.service-buttons a:last-child:hover{
+	color: white;
+}
+.service-buttons a:last-child:hover:before{
+	transition: all 0.5s ease;
+	left: 0;
+	right:0;
+	opacity: 1;
+	z-index: -1;
 }
 
-@media (max-width: 1028px) {
-	#services{
-		height:150vh;
-	}
+@media (max-width: 868px){
 	.services-flex{
+		padding: 10px;
 		flex-direction: column;
-	}
-  .service-flex{
-	  padding: 0;
-		padding-left: 5px;
-		padding-top: 5px; 
-	}
-	.service-1, .service-2{
-		height: 40%;
-		width: 95%;
-	}
-	.service-1 img, .service-2 img{
-		height: 50%;
+		gap: 10px;
 	}
 }
-@media (max-width: 480px){
-
-	#services h1, #institute h1, #numerology h1{
-		font-size:25px;
-		padding: 5px;
-	}
-}
+ 

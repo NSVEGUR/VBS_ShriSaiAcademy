@@ -1,114 +1,44 @@
 #about{
-	height: calc(100vh - 80px);
-	position: relative;
-	/* overflow: hidden; */
+	font-size: 20px;
+	text-align:justify;
 }
-#about:after {
-  content: ' ';
-  border-top: 50vh solid var(--tertiary-light-color);
-  border-left: 50vw solid transparent;
-	top: 0;
-  width: 0;
-  position: absolute;
-	right: 0;
-	z-index: 3;
-}
-#about:before {
-  content: ' ';
-  border-top: 85vh solid var(--secondary-light-color);
-  border-left: 85vw solid transparent;
-	top: 0;
-  width: 0;
-  position: absolute;
-	right: 0;
-	z-index: 2;
-}
-.about-text{
-	position: absolute;
-	inset: 0;
-	padding: 50px;
-	z-index: 4;
-}
-.about-text h1{
+#about h4{
 	font-family: var(--heading-font);
-	font-size:40px;
-	margin-bottom: 10px;
+	color: var(--primary-dark-color);
+  text-shadow: 0 8px rgba(0, 0, 0, 0.05);
+	margin: 20px 0;
 }
+
+
+#about h5{
+	margin: 20px 0;
+}
+
+#about div ul li {
+	list-style: disc;
+	margin-left: 20px;
+}
+
 .about-flex{
-	height:100%;
-  display: flex;
+	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: 10px;
+	justify-content:center;
+	padding: 0 50px;
 }
-#about h1{
-	color: var(--secondary-text-color);
-	font-family: var(--heading-font);
-	margin-left: 20px;
-	margin-top: 30px;
-}
-.about-flex div{
-	width: 50%;
-	font-size: 20px;
-	text-align: justify; 
-	padding: 20px;
+.about-flex div:first-child{
+	width: 60%;
 }
 
-.about-flex h4{
-	font-size: 25px;
-	/* font-weight:500; */
-	margin-bottom:10px;
-	font-family: var(--heading-font);
-}
-.about-flex h5{
-	margin-bottom: 20px;
-}
-.about-flex li{
-	margin-left: 20px;
-	list-style:disc;
-}
-@media (max-width: 858px){
-	#about:after {
-		border-top: 40vh solid var(--tertiary-light-color);
-		border-left: 40vw solid transparent;
+@media (max-width: 858px) {
+	#about{
+		font-size: 15px;
 	}
-	#about:before {
-		border-top: 70vh solid var(--secondary-light-color);
-		border-left: 70vw solid transparent;
-	}	
 	.about-flex{
-		flex-direction: column;
+		flex-direction: column-reverse;
+		padding: 0 10px;
 	}
-	.about-text{
-		padding: 5px;
-	}
-	.about-flex div{
+	.about-flex div:first-child{
 		width: 100%;
-	}
-}
-@media (max-width: 580px) {
-	#about{
-		height:110vh;
-	}
-}
-@media (max-width: 480px){
-
-	#about{
-		height:90vh;
-	}
-	#about h1{
-		font-size:25px;
-	}
-	.about-flex div{
-		font-size: 16px;
-	}
-	
-	.about-flex h4{
-		font-size: 20px;
-	}
-}
-@media (max-width: 380px){
-	#about{
-		height:110vh;
 	}
 }

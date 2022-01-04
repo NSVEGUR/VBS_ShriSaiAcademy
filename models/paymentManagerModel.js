@@ -10,15 +10,15 @@ const paymentManagerSchema = new mongoose.Schema({
 		type: String,
 		required: [true, 'Payment Schema must have a heading'],
 	},
+	topheading: {
+		type: String,
+		required: [true, 'Payment Schema must have a topheading'],
+	},
 	description: String,
 	amount: {
 		type: Number,
 		required: [true, 'Payment Schema must have a Amount']
 	},
-	paymentLink: {
-		type: String,
-		required: [true, 'Payment Schema must have a Payment Link'],
-	}
 });
 
 const PaymentManager = mongoose.model('PaymentManager', paymentManagerSchema);

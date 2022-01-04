@@ -22,6 +22,7 @@ exports.getNumerologyPayment = catchAsync(async (req, res, next) => {
 		title: "VBS Payments",
 		subtitle: "Numerology Section",
 		heading: payment.heading,
+		topheading: payment.topheading,
 		description: payment.description,
 		amount: payment.amount
 	});
@@ -36,10 +37,26 @@ exports.getBootcampPayment = catchAsync(async (req, res, next) => {
 		title: "VBS Payments",
 		subtitle: "Spoken Bootcamp",
 		heading: payment.heading,
+		topheading: payment.topheading,
 		description: payment.description,
 		amount: payment.amount
 	});
 });
+
+exports.getHoroscopyPayment = catchAsync(async (req, res, next) => {
+	let payment = await PaymentManager.find({
+		"paymentAPICall": "HoroscopySection"
+	});
+	payment = payment[0];
+	res.status(200).render('payment', {
+		title: "VBS Payments",
+		subtitle: "Horoscopy Section",
+		heading: payment.heading,
+		topheading: payment.topheading,
+		description: payment.description,
+		amount: payment.amount
+	});
+})
 
 exports.paymentSuccessful = catchAsync(async (req, res, next) => {
 	const order_id = fs.readFileSync(path.join(__dirname, '../data/orderid.txt'), 'utf8');

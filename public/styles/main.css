@@ -3,10 +3,12 @@
 @import '_home.css';
 @import '_about.css';
 @import '_services.css';
+@import '_institute.css';
+@import '_numerology.css';
 @import '_template.css';
 @import '_contact.css';
+@import '_heading.css';
 @import '_footer.css';
-
 
 .error-page{
   height: 100vh;

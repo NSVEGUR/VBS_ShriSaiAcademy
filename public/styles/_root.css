@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Lato&display=swap');
 
 :root{
   --primary-font: 'Lato', sans-serif;
+  --secondary-font:'Barlow Condensed', sans-serif;
   --heading-font: Helvetica, Arial, sans-serif;
   --primary-background-color: #f8f9fa;
   --secondary-background-color: #dee2e6;
   --tertiary-background-color: #ced4da;
-  --primary-light-color: #ede0d4;
+  /* --primary-light-color: #fff8f1; */
+  --primary-light-color: #ffffff;
   --secondary-light-color: #e6ccb2;
   --tertiary-light-color: #ddb892;
   --primary-dark-color: #5a2900;
   --secondary-dark-color: #9c6644;
   --tertiary-dark-color: #b08968;
-  --secondary-text-color: rgb(73, 73, 73);
+  /* --secondary-text-color: rgb(73, 73, 73); */
 }
 *{
   padding: 0;

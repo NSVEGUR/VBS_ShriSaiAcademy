@@ -17,7 +17,10 @@ html
 				.logo
 					img(src='images/logo.png')
 				.form
-					h1.heading #{heading}
+					.section-heading
+						h6 #{topheading}
+						h1 #{heading}.
+						span #{heading}
 					h3 #{description}
 				a#paybutton Pay #{amount}
 		script(src='scripts/paymentHandler.js')
