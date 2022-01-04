@@ -15,8 +15,8 @@
   height:60px;
   position: absolute;
   left:50%;
-  top:70%;
-  transform: translate(-50%, -70%);
+  top:50%;
+  transform: translate(-50%, -50%);
 }
 .circle{
   width:20px;
