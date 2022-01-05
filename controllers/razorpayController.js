@@ -19,7 +19,6 @@ exports.createOrder = catchAsync(async (req, res, next) => {
 		currency: "INR",
 	}
 	razorpay.orders.create(options, (err, order) => {
-		// console.log(order)
 		res.json(order)
 	});
 })

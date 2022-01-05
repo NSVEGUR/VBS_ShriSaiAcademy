@@ -62,12 +62,14 @@ nav ul li a{
   border-radius: 5px;
 }
 nav ul li a:hover{
-  background: var(--tertiary-light-color);
-  transition: background 0.2s linear;
+  transition: all 0.3s ease-in-out;
+  background: var(--primary-dark-color);
+  color: white;
 }
 .active:hover{
   border-radius: 0;
   background:none;
+  color: black;
 }
 
 .wrapper-menu {

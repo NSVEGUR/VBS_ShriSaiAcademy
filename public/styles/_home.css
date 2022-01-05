@@ -112,12 +112,13 @@
 	font-family:var(--primary-font);
 }
 .home-btn-1{
-	padding:12px;
+	padding:10px;
 	background-color: var(--primary-dark-color);
 	border-radius: 5px;
 	cursor: pointer;
 	color: white;
 	margin-right: 10px;
+	border: 2px solid var(--primary-dark-color);
 }
 .home-btn-2{
    padding: 10px;
@@ -129,23 +130,11 @@
 }
 
 .home-btn-1:hover{
-	transition: all 0.1s ease-in-out;
-	padding: 10px;
+	transition: all 0.5s ease-in-out;
 	background: transparent;
 	color: black;
-	border: 2px solid var(--primary-dark-color);
 }
-/* .home-btn-1:before{
-	transition: all 0.5s ease;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 100%;
-	bottom: 0;
-	opacity: 0;
-	content: "";
-	background-color: var(--primary-dark-color);
-} */
+
 .home-btn-2:before{
 	transition: all 0.5s ease;
 	position: absolute;

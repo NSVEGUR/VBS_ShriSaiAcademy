@@ -89,12 +89,13 @@ body{
 }
 
 .pop-up-btn-2{
-	padding:12px;
+	padding:10px;
 	background-color: var(--primary-dark-color);
 	border-radius: 5px;
 	cursor: pointer;
 	color: white;
 	margin-left: 10px;
+	border: 2px solid var(--primary-dark-color);
 }
 .pop-up-btn-1{
    padding: 10px;
@@ -107,13 +108,12 @@ body{
 }
 
 .pop-up-btn-2:hover{
-	transition: all 0.2s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	background: transparent;
 	color: black;
-	border: 2px solid var(--primary-dark-color);
 }
 .pop-up-btn-1:hover{
-	transition: all 0.2s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	background-color: var(--primary-dark-color);
 	color: white;
 }
@@ -168,12 +168,26 @@ header h5{
 }
 header a:first-child{
   color:black;
+  padding: 7px;
+  border-radius: 5px;
+}
+header a:first-child:hover{
+  transition: all 0.5s ease-in-out;
+  background: var(--primary-dark-color);
+  color: white;
 }
 header a:last-child{
   color: white;
   padding:5px;
   border-radius: 5px;
   background: var(--primary-dark-color);
+	border: 2px solid var(--primary-dark-color);
+}
+
+header a:last-child:hover{
+  transition: all 0.5s ease-in-out;
+  background: transparent;
+  color: black;
 }
 
 
@@ -228,7 +242,7 @@ aside{
   gap: 10px;
 }
 .card-details h1{
-  font-size: 15px;
+  font-size: 10px;
 }
 .card-details p{
   font-size: 10px;

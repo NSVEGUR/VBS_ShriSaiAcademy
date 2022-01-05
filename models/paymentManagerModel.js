@@ -31,7 +31,7 @@ module.exports = PaymentManager;
 // 	next();
 // })
 // paymentSchema.post('save', function (next) {
-// 	console.log('Hey from Post save hook 👋🏻');
+// 	('Hey from Post save hook 👋🏻');
 // 	next();
 // })
 

@@ -44,14 +44,13 @@
  .service-buttons a:first-child{
 	padding:8px;
 	background-color: var(--primary-dark-color);
+	border: 2px solid var(--primary-dark-color);
 	color: white;
  }
  .service-buttons a:first-child:hover{
-	transition: all 0.1s ease-in-out;
-	padding: 6px;
+	transition: all 0.5s ease-in-out;
 	background: transparent;
 	color: black;
-	border: 2px solid var(--primary-dark-color);
 }
  .service-buttons a:last-child{
 	padding: 6px;

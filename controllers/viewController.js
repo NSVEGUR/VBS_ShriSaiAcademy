@@ -64,6 +64,7 @@ exports.paymentSuccessful = catchAsync(async (req, res, next) => {
 	let paymentDocument = await Order.find({
 		"order_id": order_id
 	});
+	fs.writeFileSync(path.join(__dirname, '../data/orderid.txt'), '');
 	paymentDocument = paymentDocument[0].orderData;
 	res.status(200).render('status', {
 		title: "VBS Payments",

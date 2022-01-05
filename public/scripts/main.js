@@ -15,7 +15,7 @@ class App {
 					}
 				});
 			};
-		}, { threshold: [0.8] });
+		}, { threshold: [0.2] });
 
 		this.counterObserver = new IntersectionObserver(function (entries) {
 			if (entries[0].isIntersecting === true) {

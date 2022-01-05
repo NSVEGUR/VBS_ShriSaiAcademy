@@ -12,7 +12,6 @@ const handleDuplicateFieldsErrorDB = (err) => {
 }
 
 const handleValidationErrorDB = (err) => {
-	console.log('validation error');
 	const errors = Object.values(err.errors).map(el => el.message);
 	const message = `Invalid Input Data: ${errors.join('. ')}`;
 	return (new AppError(message, 400));
@@ -56,7 +55,6 @@ module.exports = (err, req, res, next) => {
 	err.statusCode = err.statusCode || 500;
 	err.status = err.status || 'error';
 	if (process.env.NODE_ENV === 'development') {
-		console.log(err);
 		sendErrorDev(err, res);
 	} else if (process.env.NODE_ENV === 'production') {
 		let error = { ...err };

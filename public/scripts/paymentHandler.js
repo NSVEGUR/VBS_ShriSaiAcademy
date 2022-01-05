@@ -4,7 +4,7 @@ const amount = payButton.innerHTML.split(' ');
 
 axios.post('/api/v1/razorpay/order', amount).then((info) => {
 	var options = {
-		"key": "rzp_test_tBQSHKtEEr1L2W", // Enter the Key ID generated from the Dashboard
+		"key": "rzp_live_w1SVn0dFNbiMRg", // Enter the Key ID generated from the Dashboard
 		"name": "VBS Shri Sai Academy",
 		"description": heading,
 		"image": "https://raw.githubusercontent.com/ShriSaiAcademy/Logo/main/logo.png",
