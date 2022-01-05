@@ -2,6 +2,9 @@ const fs = require('fs');
 const dotenv = require('dotenv');
 const express = require('express');
 const mongoose = require('mongoose');
+const SpokenVideos = require('../models/spokenVideosModel');
+const NavodayaVideos = require('../models/navodayaVideosModel');
+const PaymentManager = require('../models/paymentManagerModel');
 
 const app = express();
 
@@ -21,30 +24,28 @@ mongoose.connect(DB, {
 	console.log('DB Connection made successfull');
 });
 
-const Orders = require('../models/ordersModel');
-const PaymentManager = require('../models/paymentManagerModel');
-const Videos = require('../models/videosModel');
 
-
-const importDataFromDB = async () => {
-	const query = await Videos.find();
-	fs.writeFile(`${__dirname}/paymentsCreatorData.json`, JSON.stringify(query), (err) => {
+const importDataFromDB = async (Model, file) => {
+	const query = await Model.find();
+	fs.writeFile(`${__dirname}/${file}`, JSON.stringify(query), (err) => {
 		if (err) {
 			return console.log(err);
 		}
-		console.log("The file was saved!");
+		console.log(`The ${Model} was saved to ${file}!`);
 	});
+	process.exit(1);
 }
 
-const exportDataToDB = async () => {
-	fs.readFile(`${__dirname}/videos.json`, 'utf-8', async (err, data) => {
+const exportDataToDB = async (Model, file) => {
+	fs.readFile(`${__dirname}/${file}`, 'utf-8', async (err, data) => {
 		if (err) {
-			console.log('Error in Reading the File');
+			console.log(`Error in Reading the File ${file}`);
 		} else {
 			try {
 				data = JSON.parse(data);
-				await Videos.create(data);
-				console.log("The data in DB is created successfully!");
+				await Model.create(data);
+				console.log(`The Data in DB  is created successfully from ${file}!`);
+				process.exit(1);
 			} catch (err) {
 				console.log(err);
 			}
@@ -52,22 +53,45 @@ const exportDataToDB = async () => {
 	});
 }
 
-const deleteDataInDB = async () => {
+const deleteDataInDB = async (Model) => {
 	try {
-		await Videos.deleteMany();
-		console.log("The data in DB is deleted!");
+		await Model.deleteMany();
+		console.log(`The Data in DB  is deleted successfully!`);
+		process.exit(1);
 	} catch (err) {
 		console.log(err);
 	}
 }
 
-if (process.argv[2] === '--import') {
-	importDataFromDB();
-} else if (process.argv[2] === '--export') {
-	exportDataToDB();
-} else if (process.argv[2] === '--delete') {
-	deleteDataInDB();
+const captureTerminalCommands = () => {
+	if (process.argv[2] === '--import-spoken') {
+		importDataFromDB(SpokenVideos, 'spokenVideos.json');
+	} else if (process.argv[2] === '--export-spoken') {
+		exportDataToDB(SpokenVideos, 'spokenVideos.json');
+	} else if (process.argv[2] === '--delete-spoken') {
+		deleteDataInDB(SpokenVideos);
+	}
+
+	if (process.argv[2] === '--import-navodaya') {
+		importDataFromDB(NavodayaVideos, 'navodayaVideos.json');
+	} else if (process.argv[2] === '--export-navodaya') {
+		exportDataToDB(NavodayaVideos, 'navodayaVideos.json');
+	} else if (process.argv[2] === '--delete-navodaya') {
+		deleteDataInDB(NavodayaVideos);
+	}
+
+	if (process.argv[2] === '--import-paymentManager') {
+		importDataFromDB(PaymentManager, 'paymentManager.json');
+	} else if (process.argv[2] === '--export-paymentManager') {
+		exportDataToDB(PaymentManager, 'paymentManager.json');
+	} else if (process.argv[2] === '--delete-paymentManager') {
+		deleteDataInDB(PaymentManager);
+	}
+
 }
+
+
+captureTerminalCommands();
 
 const port = process.env.PORT || 3000;
 app.listen(4000, () => {

@@ -3,9 +3,9 @@ const Order = require('../models/ordersModel');
 const dotenv = require('dotenv');
 const path = require('path');
 const PaymentManager = require('../models/paymentManagerModel');
-const Videos = require('../models/videosModel');
 const catchAsync = require('../utils/catchAsync');
 dotenv.config({ path: `${__dirname}/config.env` });
+
 
 
 exports.getMainPage = (req, res) => {
@@ -101,57 +101,17 @@ exports.paymentFailure = catchAsync(async (req, res, next) => {
 	})
 })
 
-function simplifyData(main, sub) {
-	const mainLink = `https://www.youtube.com/embed/${main.link.split('/')[3]}`;
-	let subDetails = [];
-	sub.map((el) => {
-		const details = {
-			link: `https://www.youtube.com/embed/${el.link.split('/')[3]}`,
-			heading: el.heading,
-			description: el.description,
-			id: el._id
-		}
-		subDetails.push(details);
-	});
-	const details = {
-		mainLink,
-		subDetails
-	}
-	return details;
-}
-
-exports.getTutor = catchAsync(async (req, res) => {
-	let data = await Videos.find();
-	let [main, ...sub] = data;
-	data = simplifyData(main, sub);
-	res.status(200).render('tutor', {
-		title: "VBS Shri Sai Academy",
-		subtitle: "Tutor",
-		data: data
-	});
-});
-
-exports.getCertainVideo = catchAsync(async (req, res) => {
-	const main = await Videos.findById(req.params.id);
-	const sub = await Videos.find();
-	const data = simplifyData(main, sub);
-	res.status(200).render('tutor', {
-		title: "VBS Shri Sai Academy",
-		subtitle: "Tutor",
-		data: data
-	});
-});
 
 exports.getNumerology = (req, res) => {
 	res.status(200).render('numerology', {
-		title: "VBS Shri Sai Academy",
+		title: "VBS",
 		subtitle: "Numerology"
 	});
 };
 exports.getInstitute = (req, res) => {
 	res.status(200).render('institute', {
-		title: "VBS Shri Sai Academy",
-		subtitle: "Institute"
+		title: "SSCPS",
+		subtitle: "Sri Sai Chaitanya"
 	});
 };
 
@@ -173,3 +133,23 @@ exports.getRefundPolicy = (req, res) => {
 		subtitle: "Returns and Refunds Policy"
 	});
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// qfpObcwHAFk

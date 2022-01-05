@@ -154,8 +154,14 @@ a{
   padding: 10px;
   text-align: center;
   border-radius: 5px;
-  background: linear-gradient(135deg, var(--primary-dark-color), var(--secondary-dark-color), var(--primary-dark-color));
+  background: var(--primary-dark-color);
   color: white;
+}
+a:hover{
+	transition: all 0.2s ease-in-out;
+	background: transparent;
+	color: black;
+	border: 2px solid var(--primary-dark-color);
 }
 .status{
   text-align: center;

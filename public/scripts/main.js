@@ -98,6 +98,12 @@ class App {
 				behavior: 'smooth',
 			})
 		})
+		document.querySelector('.service-contact').addEventListener('click', (e) => {
+			e.preventDefault();
+			document.getElementById('contact').scrollIntoView({
+				behavior: 'smooth',
+			})
+		})
 	}
 
 	//STARTS ALL THE LISTENERS

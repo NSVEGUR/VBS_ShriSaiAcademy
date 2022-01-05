@@ -4,7 +4,7 @@ const VideoController = require('../controllers/videosController');
 
 router
 	.route('/')
-	.post(VideoController.createVideo)
-	.get(VideoController.getVideos);
+	.post(VideoController.createNavodayaVideo)
+	.get(VideoController.getNavodayaVideos);
 
 module.exports = router;

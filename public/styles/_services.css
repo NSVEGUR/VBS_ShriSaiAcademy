@@ -81,7 +81,7 @@
 	z-index: -1;
 }
 
-@media (max-width: 868px){
+@media (max-width: 1200px){
 	.services-flex{
 		padding: 10px;
 		flex-direction: column;

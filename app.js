@@ -8,11 +8,13 @@ const app = express();
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorHandler');
 const viewRouter = require('./routes/viewRouter');
+const youBSRouter = require('./routes/youBSRouter');
 const paymentManagerRouter = require('./routes/paymentRouter');
 const ordersRouter = require('./routes/ordersRouter');
 const mailerRouter = require('./routes/mailerRouter');
 const razorpayRouter = require('./routes/razorpayRouter');
-const videosRouter = require('./routes/videosRouter');
+const spokenVideosRouter = require('./routes/spokenVideosRouter');
+const navodayaVideosRouter = require('./routes/navodayaVideosRouter');
 
 // app.use(morgan('dev'));
 app.use(express.json());
@@ -29,11 +31,13 @@ app.use(express.urlencoded({ extended: false }));
 
 //ROUTES
 app.use('/', viewRouter);
+app.use('/', youBSRouter);
 app.use('/api/v1/paymentManager', paymentManagerRouter);
 app.use('/api/v1/orders', ordersRouter);
 app.use('/api/v1/sendMail', mailerRouter);
 app.use('/api/v1/razorpay', razorpayRouter);
-app.use('/api/v1/videos', videosRouter);
+app.use('/api/v1/spoken', spokenVideosRouter);
+app.use('/api/v1/navodaya', navodayaVideosRouter);
 
 
 //UNUSED ROUTES MIDDLEWARE
