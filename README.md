@@ -21,7 +21,7 @@
   <br/>
 
 
-This is a website for a Educational academy named VBS Shri Sai Tutorials, completely server side rendered website written in NodeJS & MongoDB.
+This is a website build for a Educational academy named VBS Shri Sai Tutorials, completely server side rendered website written in NodeJS & MongoDB.
 
 - Everything is dynamically rendered from a DB based on client need except the static home page.
 - Includes a simple Youtube clone to watch tutorials of VBS Academy.
