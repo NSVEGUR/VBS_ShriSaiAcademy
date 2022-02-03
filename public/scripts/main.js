@@ -30,7 +30,7 @@ class App {
 
 		//OBJECT FROM Typed.js SCRIPT TO RUN TYPING ANIMATION
 		new Typed(".typed", {
-			strings: ["Srinivas Vegur", "a Professinal Tutor", "a Numerologist"],
+			strings: ["Srinivas Vegur", "a Professinal Tutor", "a Numerologist", "an Astrologist", "a School Principal"],
 			typeSpeed: 50,
 			backSpeed: 50,
 			loop: true,
@@ -98,10 +98,12 @@ class App {
 				behavior: 'smooth',
 			})
 		})
-		document.querySelector('.service-contact').addEventListener('click', (e) => {
-			e.preventDefault();
-			document.getElementById('contact').scrollIntoView({
-				behavior: 'smooth',
+		document.querySelectorAll('.service-contact').forEach(el => {
+			el.addEventListener('click', (e) => {
+				e.preventDefault();
+				document.getElementById('contact').scrollIntoView({
+					behavior: 'smooth',
+				})
 			})
 		})
 	}

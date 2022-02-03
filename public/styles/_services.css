@@ -25,7 +25,7 @@
  .service:hover{
 	 box-shadow: 7px 7px 10px rgba(180, 180, 180, 0.5), -7px 0px 7px rgba(180, 180, 180, 0.5);
  }
-.service .fas{
+.service .fas, .service .fab{
 	font-size:30px;
 	color: var(--secondary-dark-color);
 }
